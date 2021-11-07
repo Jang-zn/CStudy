@@ -1,0 +1,22 @@
+﻿#include<stdio.h>
+#include<string.h>
+
+int main(){
+    char str1[20] = "1234567890";
+    char str2[20];
+    char str3[5];
+
+    strcpy(str2,str1);
+    printf("case1 : ");
+    puts(str2);
+
+    strncpy(str3,str1,sizeof(str3));
+    printf("case2 : ");
+    puts(str3);
+
+    strncpy(str3,str1,sizeof(str3)-1);
+    str3[sizeof(str3)-1]=0;
+    printf("case3 : ");
+    puts(str3);
+    return 0;
+}
